@@ -7,8 +7,8 @@ class Solution:
         self.rear = -1
         self.front = -1
 
-  
-       
+    def is_stack_empty(self):
+        return self.top == -1
 
     def is_queue_empty(self):
         return self.front == -1 or self.front > self.rear
@@ -54,7 +54,6 @@ solution = Solution(length_of_text)
 
 # push/enqueue all the characters of string text to stack
 for index in range(length_of_text):
-    solution.push_character(text[index])
     solution.enqueue_character(text[index])
 
 is_palindrome = True
